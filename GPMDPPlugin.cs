@@ -546,6 +546,7 @@ namespace GPMDPPlugin
         //For downloading the image, called in a thread in the onMessage for the websocket
         public static void GetImageFromUrl(string url, string filePath)
         {
+            url = url.Substring(0, url.LastIndexOf('='));
             try
             {
                 // Create http request
